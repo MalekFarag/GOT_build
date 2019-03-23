@@ -8,6 +8,13 @@
 	banners			= document.getElementById('houseImages'),
 	para 			= document.querySelector('.house-info');
 
+
+	function playVideo(){
+		video.load();
+		video.play();
+		lightbox.classList.add('lightbox-on');
+	}
+
 	function openLightbox() {
 		let targetHouse = this.className.split(" ")[1];
 		//this gives us a class for house name. this makes a 2nd class ont he shields.
@@ -17,13 +24,8 @@
 
 		video.src = `video/House-${targetHouse}.mp4`; 
 		// I changed the src files to lowercase. if i did not i need to include the code above and chage video.src to 'targetVid'
-		lightbox.classList.add('lightbox-on');
-
-
-
-		video.load();
-		video.play();
 		
+		setTimeout(playVideo, 800);
 	}
 
 	//function timeoutLightbox(){
