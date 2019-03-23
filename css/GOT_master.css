@@ -28,6 +28,12 @@ main {
 	top:30px;
 }
 
+.house-info{
+	color: #ffffff;
+	font-family: 'GOT_font';
+	margin-top: 15px;
+}
+
 #imageContainer {
 	width:600px;
 	height:360px;

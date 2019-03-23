@@ -5,7 +5,8 @@
 	lightbox 		= document.querySelector('.lightbox'),
 	video 			= document.querySelector('video'),
 	closeButton		= document.querySelector('.lightbox-close'),
-	banners			= document.getElementById('houseImages');	
+	banners			= document.getElementById('houseImages'),
+	para 			= document.querySelector('.house-info');
 
 	function openLightbox() {
 		let targetHouse = this.className.split(" ")[1];
@@ -25,6 +26,10 @@
 		
 	}
 
+	//function timeoutLightbox(){
+	//	setTimeout(openLightbox, 1000);
+	//}
+
 	function closeLightbox() {
 		lightbox.classList.remove('lightbox-on');
 		video.currentTime = 0;
@@ -42,12 +47,21 @@
 		banners.style.right = currentOffset + 'px';
 	}
 
+	function changeP() {
+		let targetHouse = this.className.split(" ")[1];
 
-	//animation for banner at top
+		para.innerHTML = targetHouse;
+	}
+
+
+	//Animation for banner at top
 	sigils.forEach(sigil => sigil.addEventListener('click', animateBanners));
+
 	//Start Video
 	sigils.forEach(sigil => sigil.addEventListener('click', openLightbox));
 
+	//Chnaged P Tag
+	sigils.forEach(sigil => sigil.addEventListener('click', changeP));
 	
 
 	video.addEventListener('ended', closeLightbox);
