@@ -1,2 +1,3 @@
-# GOT_video
-Update this with a proper readme doc
+# Game of Throwns House Information
+###Everything you need to know about GOT Houses
+####All In One Place!
