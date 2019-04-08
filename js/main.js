@@ -27,6 +27,8 @@
 		// I changed the src files to lowercase. if i did not i need to include the code above and chage video.src to 'targetVid'
 		
 		setTimeout(playVideo, 1000);
+
+		moveTitle();
 	}
 
 	//function timeoutLightbox(){
@@ -37,6 +39,8 @@
 		lightbox.classList.remove('lightbox-on');
 		video.currentTime = 0;
 		video.pause();
+
+		removeTitle();
 	}
 
 	function animateBanners() {
@@ -86,6 +90,26 @@
 		if(targetHouse == "arryn"){
 			para.innerHTML = info[5];
 		}
+	}
+
+	function moveTitle(){
+		title.classList.add('top');
+
+		TweenMax.to(title, 0.6,{
+			y: -440,
+			scaleX: 1.5,
+			scaleY: 1.5,
+		});
+	}
+
+	function removeTitle(){
+		title.classList.remove('top');
+
+		TweenMax.to(title, 0.6,{
+			y: 0,
+			scaleX: 1,
+			scaleY: 1,
+		});
 	}
 
 

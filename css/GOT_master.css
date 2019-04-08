@@ -29,6 +29,8 @@ main {
 
 }
 
+
+
 .house-info{
 	color: #ffffff;
 	font-family: 'GOT_font';
@@ -36,9 +38,9 @@ main {
 	font-size: 12px;
 	line-height: 20px;
 	letter-spacing: 1px;
-	max-width: 900px;
-	position: relative;
-	left: 500px;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #imageContainer {
@@ -119,6 +121,7 @@ main {
 	height: 100%;
 	text-align: center;
 	display: none;
+	z-index: 98;
 
 }
 
@@ -141,4 +144,9 @@ video {
 	width: 80%;
 	margin-top: 10%;
 	border: thin solid #949393;
+}
+
+.top{
+	position: relative;
+	z-index: 99;
 }
